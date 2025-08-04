@@ -1,0 +1,15 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  background-color: #f0f2f5;
+}
+
+form.card {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

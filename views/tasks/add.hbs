@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2>Add Task</h2>
+  <form method="POST" action="/tasks/add">
+    <div class="mb-3">
+      <input name="title" class="form-control" placeholder="Title" required>
+    </div>
+    <div class="mb-3">
+      <textarea name="description" class="form-control" placeholder="Description"></textarea>
+    </div>
+    <div class="mb-3">
+      <input type="date" name="dueDate" class="form-control">
+    </div>
+    <div class="mb-3">
+      <select name="status" class="form-select">
+        <option>Pending</option>
+        <option>In Progress</option>
+        <option>Done</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+  </form>
+</div>

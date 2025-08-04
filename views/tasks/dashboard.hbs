@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2>{{user.username}}'s Dashboard</h2>
+  <a href="/tasks/add" class="btn btn-success mb-3">+ Add Task</a>
+  <div class="row">
+    {{#each tasks}}
+      <div class="col-md-4">
+        <div class="card mb-3">
+          <div class="card-body">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{description}}</p>
+            <p><strong>Status:</strong> {{status}}</p>
+            <a href="/tasks/edit/{{_id}}" class="btn btn-sm btn-warning">Edit</a>
+            <a href="/tasks/delete/{{_id}}" class="btn btn-sm btn-danger">Delete</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+  <form method="POST" action="/account/delete" onsubmit="return confirm('Are you sure you want to delete your account? This action cannot be undone.');">
+  <button type="submit" class="btn btn-outline-danger btn-sm mt-3">Delete My Account</button>
+</form>
+
+</div>

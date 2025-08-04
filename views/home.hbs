@@ -1,0 +1,11 @@
+<div class="text-center mt-5">
+  <h1 class="display-4 mb-3">Welcome to <span class="text-primary">TaskMaster</span></h1>
+  <p class="lead mb-4">Organize your tasks. Focus on what matters. Boost your productivity.</p>
+
+  {{#if user}}
+    <a class="btn btn-success btn-lg" href="/tasks/dashboard">Go to Dashboard</a>
+  {{else}}
+    <a class="btn btn-primary btn-lg me-2" href="/register">Get Started</a>
+    <a class="btn btn-outline-secondary btn-lg" href="/login">Login</a>
+  {{/if}}
+</div>

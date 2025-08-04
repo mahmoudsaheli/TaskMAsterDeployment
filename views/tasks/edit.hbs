@@ -1,0 +1,22 @@
+<div class="container mt-4">
+  <h2>Edit Task</h2>
+  <form method="POST" action="/tasks/edit/{{task._id}}">
+    <div class="mb-3">
+      <input name="title" value="{{task.title}}" class="form-control" required>
+    </div>
+    <div class="mb-3">
+      <textarea name="description" class="form-control">{{task.description}}</textarea>
+    </div>
+    <div class="mb-3">
+      <input type="date" name="dueDate" value="{{task.dueDate}}" class="form-control">
+    </div>
+    <div class="mb-3">
+      <select name="status" class="form-select">
+        <option {{#ifCond task.status "Pending"}}selected{{/ifCond}}>Pending</option>
+        <option {{#ifCond task.status "In Progress"}}selected{{/ifCond}}>In Progress</option>
+        <option {{#ifCond task.status "Done"}}selected{{/ifCond}}>Done</option>
+      </select>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>

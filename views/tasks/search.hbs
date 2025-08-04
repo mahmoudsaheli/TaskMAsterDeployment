@@ -1,0 +1,13 @@
+<h2>Search Results for "{{q}}"</h2>
+
+<form method="GET" action="/tasks/search" class="mb-3">
+  <input name="q" class="form-control" placeholder="Search tasks..." value="{{q}}">
+</form>
+
+<ul class="list-group">
+  {{#each tasks}}
+    <li class="list-group-item">
+      <strong>{{title}}</strong> – {{status}} (due {{dueDate}})
+    </li>
+  {{/each}}
+</ul>
